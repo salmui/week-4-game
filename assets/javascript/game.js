@@ -1,9 +1,9 @@
 $( document ).ready(function(){
-  var Random=Math.floor(Math.random()*101+19)
+  var random=Math.floor(Math.random()*101+19)
   // Selects a random number to be shown at the start of the game
   // Number should be should be between 19 - 120
   //
-  $('#randomNumber').text(Random);
+  $('#randomNumber').text(random);
   // Appending random number to the randomNumber id in the html doc
   //
   var num1= Math.floor(Math.random()*11+1)
@@ -21,9 +21,9 @@ $('#numberWins').text(wins);
 $('#numberLosses').text(losses);
 //resets the game
 function reset(){
-      Random=Math.floor(Math.random()*101+19);
-      console.log(Random)
-      $('#randomNumber').text(Random);
+      random=Math.floor(Math.random()*101+19);
+
+      $('#randomNumber').text(random);
       num1= Math.floor(Math.random()*11+1);
       num2= Math.floor(Math.random()*11+1);
       num3= Math.floor(Math.random()*11+1);
@@ -38,7 +38,7 @@ alert("You won!");
   $('#numberWins').text(wins);
   reset();
 }
-//addes the losses to the userTotal
+//adds the losses to the userTotal
 function loser(){
 alert ("You lose!");
   losses++;
@@ -51,10 +51,10 @@ alert ("You lose!");
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
           //sets win/lose conditions
-        if (userTotal == Random){
+        if (userTotal == random){
           yay();
         }
-        else if ( userTotal > Random){
+        else if ( userTotal > random){
           loser();
         }
   })
@@ -62,10 +62,10 @@ alert ("You lose!");
     userTotal = userTotal + num2;
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
-        if (userTotal == Random){
+        if (userTotal == random){
           yay();
         }
-        else if ( userTotal > Random){
+        else if ( userTotal > random){
           loser();
         }
   })
@@ -74,10 +74,10 @@ alert ("You lose!");
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
 //sets win/lose conditions
-          if (userTotal == Random){
+          if (userTotal == random){
           yay();
         }
-        else if ( userTotal > Random){
+        else if ( userTotal > random){
           loser();
         }
   })
@@ -86,10 +86,10 @@ alert ("You lose!");
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
 
-          if (userTotal == Random){
+          if (userTotal == random){
           yay();
         }
-        else if ( userTotal > Random){
+        else if ( userTotal > random){
           loser();
         }
   });
